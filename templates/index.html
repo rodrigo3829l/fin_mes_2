@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidad de Vida</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function validateForm() {
+            const inputs = document.querySelectorAll('input');
+            for (let input of inputs) {
+                if (input.value === '') {
+                    alert('Todos los campos son requeridos');
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        window.onload = function() {
+            const prediction = "{{ prediction }}";
+            if (prediction) {
+                alert(`Tu predicción de vida es de ${prediction} años`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="avatar"></div>
+            <h1>Rodrigo del Ángel Gerardo</h1>
+            <p>Matrícula: 20210658</p>
+            <p>Grupo/Grado: 9no A</p>
+            <form action="/predict" method="post" onsubmit="return validateForm()">
+                <label for="idh">Índice de Desarrollo Humano en Ingresos</label>
+                <input type="text" id="idh" name="idh" placeholder="Ingresa el índice de desarrollo humano en ingresos" required>
+
+                <label for="tma">Tasa de Mortalidad de Adultos</label>
+                <input type="text" id="tma" name="tma" placeholder="Ingresa la tasa de mortalidad de adultos" required>
+
+                <label for="vih">Tasa de Incidencia de VIH/SIDA</label>
+                <input type="text" id="vih" name="vih" placeholder="Ingresa la tasa de incidencia de VIH/SIDA" required>
+
+                <label for="prevalencia">Prevalencia de Delgadez entre Niños y Adolescentes</label>
+                <input type="text" id="prevalencia" name="prevalencia" placeholder="Ingresa la prevalencia de delgadez entre niños y adolescentes" required>
+
+                <button type="submit">Calcular Calidad de Vida</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

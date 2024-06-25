@@ -1,0 +1,79 @@
+body {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px;
+}
+
+.avatar {
+    background-image: url('https://res.cloudinary.com/dltytaqui/image/upload/v1717687532/tceqb1qmkwnpapu4q26d.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: #444444;
+    color: #ffffff;
+}
+
+button {
+    background-color: #ff5555;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #ff4444;
+}
