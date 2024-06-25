@@ -9,7 +9,7 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
 # Definir la ruta de los modelos
-MODEL_PATH = 'model.pkl'
+MODEL_PATH = 'modelo.pkl'
 SCALER_PATH = 'scaler.pkl'
 
 # Verificar la existencia de los archivos de modelo y escalador
